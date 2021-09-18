@@ -1,4 +1,4 @@
-package mx.chux.ca.ds;
+package mx.chux.cs.ds;
 
 import java.util.Arrays;
 import java.util.List;

@@ -16,7 +16,7 @@ public abstract class BinaryTree<E extends Comparable<E>> {
     protected Node<E> root = null;
 
     public static final <E extends Comparable<E>> BalancedBinaryTree<E> newBalancedInstance() {
-        return new AVLTree<E>();
+        return new AVLTree<>();
     }
     
     public final E getRoot() {

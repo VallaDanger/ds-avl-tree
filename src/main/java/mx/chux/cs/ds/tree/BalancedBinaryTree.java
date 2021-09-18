@@ -5,7 +5,7 @@ public abstract class BalancedBinaryTree<E extends Comparable<E>> extends Binary
     protected BalancedBinaryTree() {}
     
     public static final <E extends Comparable<E>> BalancedBinaryTree<E> newInstance() {
-        return new AVLTree<E>();
+        return new AVLTree<>();
     }
     
     public final int getBalance() {
