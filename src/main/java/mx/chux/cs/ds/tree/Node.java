@@ -41,17 +41,13 @@ public class Node<E extends Comparable<E>> implements Supplier<E> {
         return this.parent;
     }
 
-    private boolean hasChild(Node<E> node) {
-        return node != null;
-    }
-
     Node<E> setLeft(final Node<E> node) {
         this.left = node;
         return this;
     }
 
     boolean hasLeft() {
-        return hasChild(this.left);
+        return this.left != null;
     }
 
     Node<E> getLeft() {
@@ -68,7 +64,15 @@ public class Node<E extends Comparable<E>> implements Supplier<E> {
     }
 
     boolean hasRight() {
-        return hasChild(this.right);
+        return this.right != null;
+    }
+    
+    boolean isParent() {
+        return hasLeft() || hasRight();
     }
 
+    boolean isComplete() {
+        return hasLeft() && hasRight();
+    }
+    
 }
